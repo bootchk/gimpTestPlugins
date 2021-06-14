@@ -26,7 +26,7 @@ import sys
 
 
 
-def myMinPlugin(procedure, run_mode, image, drawable, args, data):
+def myMinPlugin(procedure, run_mode, image, count, drawables, args, data):
     """
     This is a callback from Gimp, in the "run" phase.
     Perform the actions of this plugin.
