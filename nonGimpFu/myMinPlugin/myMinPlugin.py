@@ -25,6 +25,8 @@ from gi.repository import GLib
 import sys
 
 
+# !!! You can't call Gimp (at module import time) before calling Gimp.main()
+# print(Gimp.version())
 
 def myMinPlugin(procedure, run_mode, image, count, drawables, args, data):
     """
@@ -79,5 +81,9 @@ class MyMinPlugin (Gimp.PlugIn):
 """
 At Python import time, call into Gimp.
 Expect callbacks later.
+
+!!! Does not return.
+You cannot call Gimp.methods() textually after this call,
+since the GIMP wire protocol will have closed.
 """
 Gimp.main(MyMinPlugin.__gtype__, sys.argv)
