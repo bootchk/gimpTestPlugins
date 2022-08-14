@@ -213,11 +213,13 @@ def plugin_func(image, drawable):
 
     result = "foo"  # TODO create JSON text, put it in file
 
-    print(result)
+    print("WIP: the console is all that was created.")
+    """
     if result:
       print(f"Success: file name: {filename}")
     else:
       print(">>>>Failed to dump")
+    """
 
 
 
